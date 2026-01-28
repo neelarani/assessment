@@ -18,9 +18,11 @@ export default function Header() {
   const title = getTitle(pathname);
 
   return (
-    <div className="bg-[#111B3C] h-[96px] p-6 flex justify-between items-center w-full">
+    <div className="bg-[#111B3C] sticky top-0 h-[96px] p-6 flex justify-between items-center w-full">
       <div>
-        <h1 className="text-xl font-semibold text-white">{title}</h1>
+        <h1 className="text-base ml-10 md:ml-0 md:text-xl font-semibold text-white">
+          {title}
+        </h1>
       </div>
 
       <div className="flex gap-5 items-center">
