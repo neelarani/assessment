@@ -1,9 +1,14 @@
+import { AppointmentCard } from "@/app/components/Dashboard/AppointmentCard";
+import { AppointmentsTable } from "@/app/components/Dashboard/AppointmentsTable";
+import { BookingLink } from "@/app/components/Dashboard/BookingLink";
 import React from "react";
 
 export default function AppointmentsPage() {
   return (
     <div>
-      <h1 className="text-red-500">Appointments page</h1>
+      <AppointmentCard />
+      <BookingLink />
+      <AppointmentsTable />
     </div>
   );
 }
