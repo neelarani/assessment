@@ -1,9 +1,9 @@
-import React from "react";
+import Settings from "@/app/components/Dashboard/Settings";
 
-export default function Settings() {
+export default function SettingsPage() {
   return (
     <div>
-      <h1 className="text-red-400">settings</h1>
+      <Settings />
     </div>
   );
 }
