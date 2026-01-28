@@ -14,7 +14,6 @@ const mockAppointments = [
     date: "02/06/2026",
     slotNo: "1",
     startTime: "09:00",
-    technician: "Md. Abdun Nur",
   },
   {
     id: 2,
@@ -28,7 +27,7 @@ const mockAppointments = [
     startTime: "10:00",
   },
   {
-    id: 3,
+    id: 1,
     clientName: "Jane.D",
     clientPhone: "01960685765",
     clientEmail: "admin@gmail.com",
@@ -36,10 +35,10 @@ const mockAppointments = [
     repairType: "Screen",
     date: "02/06/2026",
     slotNo: "1",
-    startTime: "11:00",
+    startTime: "09:00",
   },
   {
-    id: 4,
+    id: 2,
     clientName: "Jane.D",
     clientPhone: "01960685765",
     clientEmail: "admin@gmail.com",
@@ -47,10 +46,10 @@ const mockAppointments = [
     repairType: "Screen",
     date: "02/06/2026",
     slotNo: "1",
-    startTime: "12:00",
+    startTime: "10:00",
   },
   {
-    id: 5,
+    id: 1,
     clientName: "Jane.D",
     clientPhone: "01960685765",
     clientEmail: "admin@gmail.com",
@@ -58,11 +57,10 @@ const mockAppointments = [
     repairType: "Screen",
     date: "02/06/2026",
     slotNo: "1",
-    startTime: "02:00",
-    technician: "Md. Abdun Nur",
+    startTime: "09:00",
   },
   {
-    id: 6,
+    id: 2,
     clientName: "Jane.D",
     clientPhone: "01960685765",
     clientEmail: "admin@gmail.com",
@@ -70,8 +68,129 @@ const mockAppointments = [
     repairType: "Screen",
     date: "02/06/2026",
     slotNo: "1",
-    startTime: "03:00",
+    startTime: "10:00",
   },
+  {
+    id: 1,
+    clientName: "Jane.D",
+    clientPhone: "01960685765",
+    clientEmail: "admin@gmail.com",
+    device: "Apple/iPhone 13pro",
+    repairType: "Screen",
+    date: "02/06/2026",
+    slotNo: "1",
+    startTime: "09:00",
+  },
+  {
+    id: 2,
+    clientName: "Jane.D",
+    clientPhone: "01960685765",
+    clientEmail: "admin@gmail.com",
+    device: "Apple/iPhone 13pro",
+    repairType: "Screen",
+    date: "02/06/2026",
+    slotNo: "1",
+    startTime: "10:00",
+  },
+  {
+    id: 1,
+    clientName: "Jane.D",
+    clientPhone: "01960685765",
+    clientEmail: "admin@gmail.com",
+    device: "Apple/iPhone 13pro",
+    repairType: "Screen",
+    date: "02/06/2026",
+    slotNo: "1",
+    startTime: "09:00",
+  },
+  {
+    id: 2,
+    clientName: "Jane.D",
+    clientPhone: "01960685765",
+    clientEmail: "admin@gmail.com",
+    device: "Apple/iPhone 13pro",
+    repairType: "Screen",
+    date: "02/06/2026",
+    slotNo: "1",
+    startTime: "10:00",
+  },
+  {
+    id: 1,
+    clientName: "Jane.D",
+    clientPhone: "01960685765",
+    clientEmail: "admin@gmail.com",
+    device: "Apple/iPhone 13pro",
+    repairType: "Screen",
+    date: "02/06/2026",
+    slotNo: "1",
+    startTime: "09:00",
+  },
+  {
+    id: 2,
+    clientName: "Jane.D",
+    clientPhone: "01960685765",
+    clientEmail: "admin@gmail.com",
+    device: "Apple/iPhone 13pro",
+    repairType: "Screen",
+    date: "02/06/2026",
+    slotNo: "1",
+    startTime: "10:00",
+  },
+  {
+    id: 1,
+    clientName: "Jane.D",
+    clientPhone: "01960685765",
+    clientEmail: "admin@gmail.com",
+    device: "Apple/iPhone 13pro",
+    repairType: "Screen",
+    date: "02/06/2026",
+    slotNo: "1",
+    startTime: "09:00",
+  },
+  {
+    id: 2,
+    clientName: "Jane.D",
+    clientPhone: "01960685765",
+    clientEmail: "admin@gmail.com",
+    device: "Apple/iPhone 13pro",
+    repairType: "Screen",
+    date: "02/06/2026",
+    slotNo: "1",
+    startTime: "10:00",
+  },
+  {
+    id: 1,
+    clientName: "Jane.D",
+    clientPhone: "01960685765",
+    clientEmail: "admin@gmail.com",
+    device: "Apple/iPhone 13pro",
+    repairType: "Screen",
+    date: "02/06/2026",
+    slotNo: "1",
+    startTime: "09:00",
+  },
+  {
+    id: 2,
+    clientName: "Jane.D",
+    clientPhone: "01960685765",
+    clientEmail: "admin@gmail.com",
+    device: "Apple/iPhone 13pro",
+    repairType: "Screen",
+    date: "02/06/2026",
+    slotNo: "1",
+    startTime: "10:00",
+  },
+];
+
+const tableHeaders = [
+  { key: "clientName", label: "Client Name" },
+  { key: "clientPhone", label: "Client Phone" },
+  { key: "clientEmail", label: "Client Email" },
+  { key: "device", label: "Device" },
+  { key: "repairType", label: "Repair Type" },
+  { key: "date", label: "Date" },
+  { key: "slotNo", label: "Slot No" },
+  { key: "startTime", label: "Start Time" },
 ];
 
 export function AppointmentsTable() {
@@ -85,86 +204,41 @@ export function AppointmentsTable() {
     startIndex + itemsPerPage,
   );
 
-  const handlePreviousPage = () => {
+  const handlePreviousPage = () =>
     setCurrentPage((prev) => Math.max(prev - 1, 1));
-  };
-
-  const handleNextPage = () => {
+  const handleNextPage = () =>
     setCurrentPage((prev) => Math.min(prev + 1, totalPages));
-  };
 
   return (
-    <div className="bg-card rounded-lg border border-border overflow-hidden">
-      {/* Table */}
+    <div className="bg-card rounded-xl border-2  border-blue-950 overflow-hidden">
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-border">
-              <th className="px-6 py-4 text-left text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                Client Name
-              </th>
-              <th className="px-6 py-4 text-left text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                Client Phone
-              </th>
-              <th className="px-6 py-4 text-left text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                Client email
-              </th>
-              <th className="px-6 py-4 text-left text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                Device
-              </th>
-              <th className="px-6 py-4 text-left text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                Repair Type
-              </th>
-              <th className="px-6 py-4 text-left text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                Date
-              </th>
-              <th className="px-6 py-4 text-left text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                Slot no
-              </th>
-              <th className="px-6 py-4 text-left text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                Start Time
-              </th>
+            <tr className="border-b border-blue-950">
+              {tableHeaders.map((header) => (
+                <th
+                  key={header.key}
+                  className="px-6 py-4 text-left text-xs font-semibold text-muted-foreground uppercase tracking-wide"
+                >
+                  {header.label}
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
             {paginatedAppointments.map((appointment) => (
               <tr
                 key={appointment.id}
-                className="border-b border-border hover:bg-background/50 transition-colors relative"
+                className="border-b border-blue-950 hover:bg-background/50 transition-colors relative"
               >
-                <td className="px-6 py-4 text-sm text-blue-400">
-                  {appointment.clientName}
-                </td>
-                <td className="px-6 py-4 text-sm text-foreground">
-                  {appointment.clientPhone}
-                </td>
-                <td className="px-6 py-4 text-sm text-foreground">
-                  {appointment.clientEmail}
-                </td>
-                <td className="px-6 py-4 text-sm text-foreground">
-                  {appointment.device}
-                </td>
-                <td className="px-6 py-4 text-sm text-foreground">
-                  {appointment.repairType}
-                </td>
-                <td className="px-6 py-4 text-sm text-foreground">
-                  {appointment.date}
-                </td>
-                <td className="px-6 py-4 text-sm text-foreground">
-                  {appointment.slotNo}
-                </td>
-                <td className="px-6 py-4 text-sm text-foreground">
-                  {appointment.startTime}
-                </td>
-
-                {/* Technician Badge */}
-                {appointment.technician && (
-                  <div className="absolute left-6 top-1/2 -translate-y-1/2 pointer-events-none">
-                    <div className="bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
-                      {appointment.technician}
-                    </div>
-                  </div>
-                )}
+                {tableHeaders.map((header) => (
+                  <td
+                    key={header.key}
+                    className={`px-6 py-4 text-sm ${header.key === "clientName" ? "text-blue-400" : "text-foreground"}`}
+                  >
+                    {appointment[header.key]}
+                  </td>
+                ))}
               </tr>
             ))}
           </tbody>
@@ -172,7 +246,7 @@ export function AppointmentsTable() {
       </div>
 
       {/* Pagination */}
-      <div className="flex items-center justify-center gap-2 px-6 py-4 border-t border-border">
+      <div className="flex items-center justify-center gap-2 px-6 py-4 border-t border-blue-950">
         <button
           onClick={handlePreviousPage}
           disabled={currentPage === 1}
@@ -187,10 +261,10 @@ export function AppointmentsTable() {
             <button
               key={page}
               onClick={() => setCurrentPage(page)}
-              className={`w-10 h-10 rounded-lg text-sm font-medium transition-colors ${
+              className={`w-10 h-10 rounded-lg text-sm font-bold transition-colors ${
                 currentPage === page
-                  ? "bg-blue-500 text-white"
-                  : "text-muted-foreground hover:bg-background/50"
+                  ? "bg-[#A6C8FF]  text-black"
+                  : "text-blue-500 hover:bg-background/50"
               }`}
             >
               {page}
@@ -201,7 +275,7 @@ export function AppointmentsTable() {
         <button
           onClick={handleNextPage}
           disabled={currentPage === totalPages}
-          className="flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:bg-background/50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium text-blue-500 hover:bg-background/50  cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           Next
           <ChevronRight className="w-4 h-4" />
