@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="bg-[#111B3C] h-[96px] flex justify-between items-center w-full">
+    <div className="bg-[#111B3C] h-[96px] p-6 flex justify-between items-center w-full">
       <div>
         <h1>Dashboard Overview</h1>
       </div>
