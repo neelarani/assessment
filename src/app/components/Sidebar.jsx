@@ -2,6 +2,7 @@
 
 import { Phone, Calendar, Settings, LogOut, Zap, House, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
   const menuItems = [
@@ -20,6 +21,8 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
     },
     { icon: Settings, label: "Settings", id: "settings", href: "/settings" },
   ];
+
+  const pathname = usePathname();
 
   return (
     <>
@@ -48,7 +51,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
           />
         </div>
 
-        <div className="w-10 h-10 bg-gradient-to-t from-[#00D4FF] to-[#00FF88] rounded-lg flex items-center justify-center mt-4">
+        <div className="w-10  h-10 bg-gradient-to-t from-[#00D4FF] to-[#00FF88] rounded-lg flex items-center justify-center mt-9">
           <Zap className="w-6 h-6 text-gray-900" />
         </div>
 
@@ -60,8 +63,24 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
                 key={item.id}
                 href={item.href}
                 onClick={() => setSidebarOpen(false)}
-                className="w-full flex items-center gap-3 px-4 py-3 rounded-xl
-                  text-sidebar-foreground hover:bg-white/10 transition"
+                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300
+    ${
+      pathname === item.href
+        ? `
+          bg-gradient-to-r
+          from-[#5fa3ff40]
+          to-[#3b82f640]
+          text-white
+          border border-[rgba(255,255,255,0.34)]
+         shadow-[0_40px_55px_rgba(95,163,255,0.95),inset_0_0_10px_rgba(255,255,255,0.35)]
+
+        `
+        : `
+          text-sidebar-foreground
+          hover:bg-white/10
+        `
+    }
+  `}
               >
                 <Icon className="w-5 h-5" />
                 <span className="text-sm">{item.label}</span>
