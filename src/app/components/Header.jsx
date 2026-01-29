@@ -16,9 +16,8 @@ export default function Header({ setSidebarOpen }) {
   };
 
   return (
-    <div className="bg-[#111B3C] sticky top-0 h-[96px] py-8 px-4 md:px-6 flex justify-between items-center w-full">
+    <div className="bg-[#111B3C] sticky  z-10 top-0 h-[96px] py-8 px-4 md:px-6 flex justify-between items-center w-full">
       <div className="flex items-center gap-3">
-        {/* hamburger (mobile only) */}
         <Menu
           className="w-6 h-6 text-white cursor-pointer md:hidden"
           onClick={() => setSidebarOpen(true)}

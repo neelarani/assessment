@@ -26,7 +26,7 @@ export function TrendsChart() {
   const options = ["This Week", "Last Week", "This Month"];
 
   return (
-    <div className="bg-[#111B3C] rounded-lg p-6 border-2 border-blue-950 mt-6 md:mr-5 ">
+    <div className="bg-[#111B3C] rounded-lg p-6 border-2 border-blue-950 mt-6 ">
       <div className="flex justify-between items-start mb-6">
         <div>
           <h3 className="text-lg font-semibold mb-1">Call Trends - {period}</h3>

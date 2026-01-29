@@ -41,7 +41,6 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
           md:translate-x-0
         `}
       >
-        {/* close button (mobile) */}
         <div className="w-full flex justify-end p-4 md:hidden">
           <X
             className="w-6 h-6 text-white cursor-pointer"

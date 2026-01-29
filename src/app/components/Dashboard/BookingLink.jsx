@@ -10,7 +10,7 @@ export function BookingLink() {
   return (
     <div className="bg-gradient-to-b from-[#1A1A2E] to-[#16213E] rounded-lg p-6 border-2 border-blue-950 mb-8">
       <h3 className="text-lg font-semibold mb-4">Booking Link</h3>
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col md:flex-row md:items-center gap-4">
         <input
           type="text"
           value={bookingUrl}

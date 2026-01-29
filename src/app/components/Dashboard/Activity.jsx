@@ -44,12 +44,11 @@ const repairRequests = [
 
 export function Activity() {
   return (
-    <div className="bg-[#111B3C] rounded-2xl p-6 border-2 border-blue-950 my-12">
+    <div className="bg-[#111B3C] rounded-2xl p-6 border-2 border-blue-950 my-4 md:my-12">
       <h3 className="text-lg font-semibold mb-4">Recent Activity</h3>
       <div className="space-y-3">
         {recentActivities.map((activity) => (
           <div key={activity.id} className="flex items-start gap-3">
-            {/* Colored Bullet */}
             <span
               className={`w-2 h-2 mt-2 rounded-full flex-shrink-0 ${activity.color}`}
             ></span>
@@ -67,7 +66,7 @@ export function Activity() {
 
 export function TopRepairRequests() {
   return (
-    <div className="bg-[#111B3C] rounded-2xl p-6 border-2 border-blue-950 my-12 md:mr-5 ">
+    <div className="bg-[#111B3C] rounded-2xl p-6 border-2 border-blue-950 my-4 md:my-12  ">
       <h3 className="text-lg font-semibold mb-4">Top Repair Requests</h3>
       <div className="space-y-4">
         {repairRequests.map((request, index) => (

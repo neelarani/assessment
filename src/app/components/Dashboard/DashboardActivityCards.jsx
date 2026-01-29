@@ -53,7 +53,7 @@ const cardsData = [
 
 export default function DashboardActivityCards() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:mr-5 ">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
       {cardsData.map((card) => {
         const Icon = card.icon;
 

@@ -7,7 +7,7 @@ import { TrendsChart } from "@/app/components/Dashboard/Trendschart";
 
 export default function DashboardOverview() {
   return (
-    <div className="md:ml-5">
+    <div className="m-5">
       <DashboardActivityCards />
       <TrendsChart />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

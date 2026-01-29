@@ -169,8 +169,8 @@ export function CallLogs() {
   };
 
   return (
-    <div className="space-y-6">
-      <div className="flex gap-4 items-center">
+    <div className="space-y-6 ">
+      <div className="flex flex-col md:flex-row gap-4 items-center">
         <div className="flex-1 relative">
           <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
           <input
@@ -183,13 +183,13 @@ export function CallLogs() {
         </div>
 
         {/* dropdown btn */}
-        <div className="flex gap-3">
+        <div className="flex  gap-3">
           <div className="relative group">
-            <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#111B3C] border-2 border-blue-950 text-white hover:bg-card/80 transition-colors">
+            <button className="flex items-center text-base gap-2 px-2 md:px-4 py-2 rounded-lg bg-[#111B3C] border-2 border-blue-950 text-white hover:bg-card/80 transition-colors">
               {typeFilter}
               <ChevronDown className="w-4 h-4" />
             </button>
-            <div className="absolute right-0 mt-2 w-40 bg-[#111B3C] border-2 border-blue-950 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10">
+            <div className="absolute right-0 mt-2 w-40 bg-[#111B3C] border-2 border-blue-950 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10 ">
               {[
                 "All Type",
                 "AI Resolved",
@@ -209,11 +209,11 @@ export function CallLogs() {
           </div>
 
           <div className="relative group">
-            <button className="flex items-center gap-2 px-4 py-2 rounded-lg  bg-[#111B3C] border-2 border-blue-950 text-white hover:bg-card/80 transition-colors">
+            <button className="flex items-center gap-2 px:2 md:px-4 py-2 rounded-lg  bg-[#111B3C] border-2 border-blue-950 text-white hover:bg-card/80 transition-colors text-base">
               {issueFilter}
               <ChevronDown className="w-4 h-4" />
             </button>
-            <div className="absolute right-0 mt-2 w-40 bg-[#111B3C] border-2 border-blue-950 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10">
+            <div className="absolute right-0 mt-2 w-40 bg-[#111B3C] border-2 border-blue-950 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10 text-base">
               {["All Issues", "Screen", "Battery", "Software", "Unknown"].map(
                 (issue) => (
                   <button
@@ -229,7 +229,7 @@ export function CallLogs() {
           </div>
 
           <div className="relative group">
-            <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#111B3C]  border-2 border-blue-950 text-white hover:bg-card/80 transition-colors">
+            <button className="flex items-center gap-2  px-2 md:px-4 py-2 rounded-lg bg-[#111B3C]  border-2 border-blue-950 text-white hover:bg-card/80 transition-colors">
               {dateFilter}
               <ChevronDown className="w-4 h-4" />
             </button>

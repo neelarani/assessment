@@ -36,9 +36,9 @@ export default function CallList({ call, isSelected, onSelect }) {
             : "border-transparent bg-card hover:bg-card/80"
         }`}
       >
-        <div className="flex items-center justify-between ">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div className="">
-            <div className="flex items-center gap-4 mb-2  ">
+            <div className="flex  items-center gap-4 mb-2  ">
               <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-500  ">
                 <Phone className="w-5 h-5 " />
               </div>
@@ -50,12 +50,12 @@ export default function CallList({ call, isSelected, onSelect }) {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 ml-13 text-sm text-gray-400 mb-2">
+            <div className="flex items-center gap-4 md:ml-13 text-sm text-gray-400 mb-2">
               <div className="flex items-center gap-1">
                 <Clock className="w-4 h-4" />
                 <span>{call.duration}</span>
               </div>
-              <div className="flex items-center gap-1">
+              <div className="flex  items-center gap-1">
                 <CheckCircle2 className="w-4 h-4" />
                 <span>{call.notes}</span>
               </div>
@@ -71,7 +71,7 @@ export default function CallList({ call, isSelected, onSelect }) {
 
           <div>
             <span
-              className={`px-2 py-1 rounded text-xs font-medium ${getStatusColor(
+              className={`px-2 py-1 rounded text-xs  font-medium ${getStatusColor(
                 call.status,
               )}`}
             >
