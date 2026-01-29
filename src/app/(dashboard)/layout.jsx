@@ -1,14 +1,19 @@
-import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
+"use client";
 
-export default function DashboardLayout({ children }) {
+import { useState } from "react";
+import Sidebar from "../components/Sidebar";
+import Header from "../components/Header";
+
+export default function Layout({ children }) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <div className="flex h-screen bg-[#121d45]">
-      <Sidebar />
+      <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-      <div className="flex-1 flex flex-col overflow-auto">
-        <Header />
-        <div className="p-6">{children}</div>
+      <div className="flex-1 flex flex-col overflow-auto gap-6 ">
+        <Header setSidebarOpen={setSidebarOpen} />
+        {children}
       </div>
     </div>
   );

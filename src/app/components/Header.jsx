@@ -1,10 +1,10 @@
 "use client";
 
-import { Bell } from "lucide-react";
+import { Bell, Menu } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-export default function Header() {
+export default function Header({ setSidebarOpen }) {
   const pathname = usePathname();
 
   const getTitle = (path) => {
@@ -15,28 +15,29 @@ export default function Header() {
     return "Dashboard";
   };
 
-  const title = getTitle(pathname);
-
   return (
-    <div className="bg-[#111B3C] sticky top-0 h-[96px] p-6 flex justify-between items-center w-full">
-      <div>
-        <h1 className="text-base ml-10 md:ml-0 md:text-xl font-semibold text-white">
-          {title}
+    <div className="bg-[#111B3C] sticky top-0 h-[96px] py-8 px-4 md:px-6 flex justify-between items-center w-full">
+      <div className="flex items-center gap-3">
+        {/* hamburger (mobile only) */}
+        <Menu
+          className="w-6 h-6 text-white cursor-pointer md:hidden"
+          onClick={() => setSidebarOpen(true)}
+        />
+
+        <h1 className="text-base md:text-xl font-semibold text-white">
+          {getTitle(pathname)}
         </h1>
       </div>
 
       <div className="flex gap-5 items-center">
         <Bell className="w-5 h-5 text-white" />
-
-        <div>
-          <Image
-            src="https://i.ibb.co/RT7sWvTr/me-removebg-preview-removebg-preview.png"
-            alt="profile"
-            width={32}
-            height={32}
-            className="rounded-full"
-          />
-        </div>
+        <Image
+          src="https://i.ibb.co/RT7sWvTr/me-removebg-preview-removebg-preview.png"
+          alt="profile"
+          width={46}
+          height={46}
+          className="rounded-full"
+        />
       </div>
     </div>
   );

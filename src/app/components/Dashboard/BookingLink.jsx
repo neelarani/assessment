@@ -7,12 +7,6 @@ export function BookingLink() {
   const [copied, setCopied] = useState(false);
   const bookingUrl = "https://techstore.com/book?id=store123";
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(bookingUrl);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
     <div className="bg-gradient-to-b from-[#1A1A2E] to-[#16213E] rounded-lg p-6 border-2 border-blue-950 mb-8">
       <h3 className="text-lg font-semibold mb-4">Booking Link</h3>
@@ -24,7 +18,6 @@ export function BookingLink() {
           className="flex-1 bg-[#0A0A0F80] border border-green-900 rounded-lg px-4 py-2 text-foreground text-sm focus:outline-none"
         />
         <button
-          onClick={handleCopy}
           className={`flex items-center gap-2 px-6 py-2 rounded-lg cursor-pointer font-medium transition-all ${
             copied
               ? "bg-green-500/20 text-green-400"

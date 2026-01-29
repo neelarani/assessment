@@ -39,7 +39,7 @@ export default function Settings() {
 
       <div className="pt-6">
         {activeTab === "profile" && <ProfileSettings />}
-        {activeTab === "password" && <div>Password Settings Content</div>}
+        {activeTab === "password" && <div>Password Settings </div>}
       </div>
     </div>
   );

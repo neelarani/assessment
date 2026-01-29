@@ -3,7 +3,7 @@ import React from "react";
 
 export default function CallLogsPage() {
   return (
-    <div>
+    <div className="md:m-5">
       <CallLogs />
     </div>
   );

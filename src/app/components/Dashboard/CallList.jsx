@@ -27,7 +27,7 @@ export default function CallList({ call, isSelected, onSelect }) {
   }
 
   return (
-    <section className="bg-[#111B3C] border-b-2 border-blue-950">
+    <section className="bg-[#111B3C]  border-t-2 border-blue-950">
       <button
         onClick={onSelect}
         className={`w-full cursor-pointer p-4 rounded-lg transition-all text-left   ${
@@ -36,9 +36,9 @@ export default function CallList({ call, isSelected, onSelect }) {
             : "border-transparent bg-card hover:bg-card/80"
         }`}
       >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between ">
           <div className="">
-            <div className="flex items-center gap-3 mb-2  ">
+            <div className="flex items-center gap-4 mb-2  ">
               <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-500  ">
                 <Phone className="w-5 h-5 " />
               </div>

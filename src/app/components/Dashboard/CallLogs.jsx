@@ -178,7 +178,7 @@ export function CallLogs() {
             placeholder="Search by phone number, issue type..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-[555px] pl-12 pr-4 py-3 rounded-lg bg-[#111B3C] border-2 border-blue-950 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-900"
+            className="md:w-[555px] pl-12 pr-4 py-3 rounded-lg bg-[#111B3C] border-2 border-blue-950 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-900"
           />
         </div>
 
@@ -249,8 +249,8 @@ export function CallLogs() {
       </div>
 
       <div className="flex flex-col lg:flex-row gap-6 ">
-        <div className="w-[555px] bg-[#111B3C] border-2 rounded-2xl border-blue-950 ">
-          <h3 className="text-lg font-semibold text-white mb-4 border-b-1 border-blue-950 p-4">
+        <div className="md:w-[555px] bg-[#111B3C] border-2 rounded-2xl border-blue-950 ">
+          <h3 className="text-base md:text-lg font-semibold text-white mb-4  p-4">
             Call List
           </h3>
           {/* class list */}
@@ -267,7 +267,7 @@ export function CallLogs() {
         </div>
 
         {/* Call details */}
-        <div className="w-[680px] bg-[#111B3C] border-2 rounded-2xl border-blue-950">
+        <div className="md:w-[700px] bg-[#111B3C] border-2 rounded-2xl border-blue-950">
           <CallDetails call={selectedCall || filteredCalls[0]} />
         </div>
       </div>

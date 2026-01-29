@@ -5,7 +5,7 @@ import React from "react";
 
 export default function AppointmentsPage() {
   return (
-    <div>
+    <div className="md:m-5">
       <AppointmentCard />
       <BookingLink />
       <AppointmentsTable />

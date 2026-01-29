@@ -215,7 +215,7 @@ export function AppointmentsTable() {
         <table className="w-full">
           <thead>
             <tr className="border-b border-blue-950">
-              {tableHeaders.map((header) => (
+              {tableHeaders?.map((header) => (
                 <th
                   key={header.key}
                   className="px-6 py-4 text-left text-xs font-semibold text-muted-foreground uppercase tracking-wide"

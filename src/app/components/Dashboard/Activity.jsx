@@ -44,7 +44,7 @@ const repairRequests = [
 
 export function Activity() {
   return (
-    <div className="bg-[#111B3C] rounded-2xl p-6 border-2 border-blue-950 mt-12">
+    <div className="bg-[#111B3C] rounded-2xl p-6 border-2 border-blue-950 my-12">
       <h3 className="text-lg font-semibold mb-4">Recent Activity</h3>
       <div className="space-y-3">
         {recentActivities.map((activity) => (
@@ -67,7 +67,7 @@ export function Activity() {
 
 export function TopRepairRequests() {
   return (
-    <div className="bg-[#111B3C] rounded-2xl p-6 border-2 border-blue-950 mt-12">
+    <div className="bg-[#111B3C] rounded-2xl p-6 border-2 border-blue-950 my-12 md:mr-5 ">
       <h3 className="text-lg font-semibold mb-4">Top Repair Requests</h3>
       <div className="space-y-4">
         {repairRequests.map((request, index) => (
