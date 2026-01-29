@@ -5,6 +5,13 @@ The focus of this task is clean UI, responsiveness, and proper component structu
 
 ---
 
+## Live Demo
+
+Check out the live version of the project here:  
+ https://assessment-bay-ten.vercel.app
+
+---
+
 ## Tech Stack
 
 - Next.js
