@@ -23,11 +23,22 @@ The focus of this task is clean UI, responsiveness, and proper component structu
 
 ---
 
+## Dashboard Menu Items
+
+The dashboard includes the following menu items:
+
+| Icon     | Label              | Path          |
+| -------- | ------------------ | ------------- |
+| House    | Dashboard Overview | /dashboard    |
+| Phone    | Call Logs          | /call-logs    |
+| Calendar | Appointments       | /appointments |
+| Settings | Settings           | /settings     |
+
 ## How to Run the Project Locally
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/neelarani/assessment.git
    ```
 
 ## Getting Started
