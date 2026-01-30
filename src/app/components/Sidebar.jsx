@@ -33,6 +33,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
         />
       )}
 
+      {/* Sidebar */}
       <div
         className={`
           fixed md:static top-0 left-0 z-50
@@ -44,6 +45,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
           md:translate-x-0
         `}
       >
+        {/* Close button */}
         <div className="w-full flex justify-end p-4 md:hidden">
           <X
             className="w-6 h-6 text-white cursor-pointer"
@@ -51,13 +53,19 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
           />
         </div>
 
-        <div className="w-10  h-10 bg-gradient-to-t from-[#00D4FF] to-[#00FF88] rounded-lg flex items-center justify-center mt-9">
+        {/* Logo */}
+        <div className="w-10 h-10 bg-gradient-to-t from-[#00D4FF] to-[#00FF88] rounded-lg flex items-center justify-center mt-9">
           <Zap className="w-6 h-6 text-gray-900" />
         </div>
 
+        {/* Menu */}
         <nav className="flex-1 p-4 space-y-6 mt-10 font-medium w-full">
           {menuItems.map((item) => {
             const Icon = item.icon;
+
+            const isActive =
+              pathname === item.href ||
+              (pathname === "/" && item.href === "/dashboard");
 
             return (
               <Link
@@ -65,23 +73,22 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
                 href={item.href}
                 onClick={() => setSidebarOpen(false)}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300
-    ${
-      pathname === item.href
-        ? `
-          bg-gradient-to-r
-          from-[#5fa3ff40]
-          to-[#3b82f640]
-          text-white
-          border border-[rgba(255,255,255,0.34)]
-         shadow-[0_40px_55px_rgba(95,163,255,0.95),inset_0_0_10px_rgba(255,255,255,0.35)]
-
-        `
-        : `
-          text-sidebar-foreground
-          hover:bg-white/10
-        `
-    }
-  `}
+                  ${
+                    isActive
+                      ? `
+                        bg-gradient-to-r
+                        from-[#5fa3ff40]
+                        to-[#3b82f640]
+                        text-white
+                        border border-[rgba(255,255,255,0.34)]
+                        shadow-[0_40px_55px_rgba(95,163,255,0.95),inset_0_0_10px_rgba(255,255,255,0.35)]
+                      `
+                      : `
+                        text-sidebar-foreground
+                        hover:bg-white/10
+                      `
+                  }
+                `}
               >
                 <Icon className="w-5 h-5" />
                 <span className="text-sm">{item.label}</span>
@@ -90,6 +97,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
           })}
         </nav>
 
+        {/* Logout */}
         <div className="p-4 w-full">
           <button className="w-full flex items-center gap-3 px-4 py-3">
             <LogOut className="w-5 h-5 text-black" />
